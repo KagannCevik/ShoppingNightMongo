@@ -49,7 +49,7 @@ Arayüzde Bootstrap 5 ile responsive tasarım yapılmış, AutoMapper ile model 
 Bu proje ile hem MongoDB ile çalışmayı öğrendim hem de gerçek bir e-ticaret projesini baştan sona geliştirme tecrübesi kazandım. Açık kaynak olarak geliştirmeye açıktır.
 
 🧩 Projeden Ekran Görüntüleri
-🎀 Vitrin Paneli
+👤 Vitrin Paneli
 
 <img width="1917" height="941" alt="Ekran görüntüsü 2025-07-11 015329" src="https://github.com/user-attachments/assets/1312c074-78ca-4109-9769-12d70ff27570" />
 <br>
@@ -61,7 +61,7 @@ Bu proje ile hem MongoDB ile çalışmayı öğrendim hem de gerçek bir e-ticar
 
 <img width="1899" height="469" alt="Ekran görüntüsü 2025-07-11 021635" src="https://github.com/user-attachments/assets/d9075670-114a-4162-9743-d09c3d45d505" />
 
-### 💌 Gerçek Zamanlı İndirim Kuponu Gönderilen Mail
+### 💎 Gerçek Zamanlı İndirim Kuponu Gönderilen Mail
 <img width="711" height="704" alt="Ekran görüntüsü 2025-07-11 015816" src="https://github.com/user-attachments/assets/fdfadd63-bf4c-4302-9329-46c03ee2aaa1" />
 
 
