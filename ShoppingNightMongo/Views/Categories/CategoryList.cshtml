@@ -1,0 +1,39 @@
+﻿@model List<ShoppingNightMongo.Dtos.CategoryDtos.ResultCategoryDto>
+@{
+    ViewData["Title"] = "Kategori Listele";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br /><br />
+    <table class="table table-hover">
+        <tr>
+            <th>#</th>
+            <th>Kategori Adı</th>
+            <th>Kategori Başlığı</th>
+            <th>Resim Url</th>
+
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CategoryId</td>
+                <td>@item.CategoryName</td>
+                <td>@item.Title</td>
+                <td>@item.ImageUrl</td>
+                <td>
+                    <a href="/Categories/DeleteCategory/@item.CategoryId" class="btn btn-info">Sil</a>
+                </td>
+                <td>
+                    <a href="/Categories/UpdateCategory/@item.CategoryId" class="btn btn-danger">Güncelle</a>
+                </td>
+            </tr>
+        }
+    </table>
+    <a href="/Categories/CreateCategory/" class="btn btn-success">
+        Yeni Kategori Ekle</a>
+</div>

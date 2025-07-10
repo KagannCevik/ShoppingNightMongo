@@ -1,0 +1,79 @@
+﻿@model List<ShoppingNightMongo.Entities.Product>
+@{
+    Layout = null;
+}
+
+<body>
+
+    <!-- ÜRÜN LİSTESİ -->
+    <div class="container row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4 text-center border p-3">
+                <img src="@item.ImageUrl" alt="@item.ProductName" width="200" height="200" />
+                <h5 class="mt-2">@item.ProductName</h5>
+                <p>@item.ProductPrice ₺</p>
+
+                <a href="#"
+                   class="btn btn-info js-show-modal1"
+                   data-name="@item.ProductName"
+                   data-price="@item.ProductPrice"
+                   data-image="@item.ImageUrl"
+                   data-description="Stok: @item.StockCount adet">
+                    Detay
+                </a>
+            </div>
+        }
+    </div>
+
+    <!-- MODAL -->
+    <div class="wrap-modal1 js-modal1 p-t-60 p-b-20" style="display: none;">
+        <div class="overlay-modal1 js-hide-modal1"></div>
+        <div class="container">
+            <div class="bg0 p-t-60 p-b-30 p-lr-15-lg how-pos3-parent">
+                <button class="how-pos3 hov3 trans-04 js-hide-modal1">
+                    <img src="images/icons/icon-close.png" alt="Kapat">
+                </button>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="wrap-pic-w pos-relative">
+                            <img id="modal-image" src="" alt="Ürün Resmi" width="100%" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="mtext-105 cl2 p-b-14" id="modal-name"></h4>
+                        <span class="mtext-106 cl2" id="modal-price"></span>
+                        <p class="stext-102 cl3 p-t-23" id="modal-description"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $('.js-show-modal1').on('click', function (e) {
+            e.preventDefault();
+
+            let name = $(this).data('name');
+            let price = $(this).data('price');
+            let image = $(this).data('image');
+            let description = $(this).data('description');
+
+            $('#modal-name').text(name);
+            $('#modal-price').text(price + " ₺");
+            $('#modal-image').attr('src', image);
+            $('#modal-description').text(description);
+
+            $('.js-modal1').fadeIn();
+        });
+
+        $('.js-hide-modal1').on('click', function () {
+            $('.js-modal1').fadeOut();
+        });
+    </script>
+
+</body>
